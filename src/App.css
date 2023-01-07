@@ -1,0 +1,89 @@
+.app {
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+/* Cabeçalho */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.header h2 {
+  color: #f9fafc;
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+/* Forms */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #575757;
+  padding: 1.5rem;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.445) 0px 7px 29px 0px;
+}
+
+.inputs-container {
+  min-height: 10rem;
+}
+
+.inputs-container form {
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+label {
+  font-weight: bold;
+  color: #cacaca;
+  font-size: 1.5rem;
+}
+
+input,
+textarea {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: .6rem;
+  border: none;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.486) 0px 2px 8px 0px;
+}
+
+textarea {
+  height: 12rem;
+}
+
+/* Actions */
+
+.actions {
+  color: #000;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.actions button {
+  min-width: 110px;
+  font-size: 1.1rem;
+  padding: 0.3rem 0.7rem;
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  text-align: center;
+  border-radius: 3px;
+  background-color: #DCDCDC;
+  cursor: pointer;
+  border: none;
+}
+
+.actions button:hover {
+  background-color: #C0C0C0;
+  transform: scale(1.03, 1.03);
+}
