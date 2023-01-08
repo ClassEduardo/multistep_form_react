@@ -9,11 +9,29 @@ import { FiSend } from 'react-icons/fi';
 
 // Hooks
   import { useForm } from "./hooks/useForm.jsx";
+  import { useState } from 'react';
 
 import './App.css';
+import { BsChatSquareDotsFill } from 'react-icons/bs';
+
+const formTemplate = {
+  name: "",
+  email: "",
+  review: "",
+  comment: "",
+};
+
 
 export default function App() {
-  const formComponents = [<UserForm />, <ReviewForm />, <Thanks />];
+  const [ data, setData ] = useState(formTemplate);
+
+  const updateFielHandle = (key, value) => {
+    setData((prev) => {
+      return { ...prev, [key] : value};
+    })
+  }
+
+  const formComponents = [<UserForm data={data} updateFielHandle={updateFielHandle} />, <ReviewForm data={data} updateFielHandle={updateFielHandle} />, <Thanks data={data} />];
 
   const {currentStep, currentComponent, changeStep, isLastStep, isFirstStep} = useForm( formComponents );
 

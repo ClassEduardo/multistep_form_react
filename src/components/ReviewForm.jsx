@@ -7,7 +7,7 @@ import {
 
 import './ReviewForm.css';
 
-export default function ReviewForm() {
+export default function ReviewForm({ data, updateFielHandle }) {
   return(
     <div className="review-form">
       <div className=" score-container">
@@ -17,6 +17,8 @@ export default function ReviewForm() {
             name="review" 
             value="unsatisfied"
             required
+            checked={data.review === "unsatisfied"}
+            onChange={(e) => updateFielHandle("review", e.target.value)}
           />
           <BsFillEmojiFrownFill />
           <p>Insatisfeito</p>
@@ -28,6 +30,9 @@ export default function ReviewForm() {
             name="review" 
             value="neutral"
             required
+            checked={data.review === "neutral"}
+            onChange={(e) => updateFielHandle("review", e.target.value)}
+
           />
           <BsFillEmojiNeutralFill />
           <p>Neutro</p>
@@ -39,6 +44,8 @@ export default function ReviewForm() {
             name="review" 
             value="satisfied"
             required
+            checked={data.review === "satisfied"}
+            onChange={(e) => updateFielHandle("review", e.target.value)}
           />
           <BsFillEmojiSmileFill />
           <p>Satisfeito</p>
@@ -50,6 +57,8 @@ export default function ReviewForm() {
             name="review" 
             value="very_satisfied"
             required
+            checked={data.review === "very_satisfied"}
+            onChange={(e) => updateFielHandle("review", e.target.value)}
           />
           <BsFillEmojiHeartEyesFill />
           <p>Muito satisfeito</p>
@@ -63,6 +72,8 @@ export default function ReviewForm() {
             id="comment"
             placeholder='Conte como foi sua experiência com o produto...' 
             required
+            value={data.comment || ""}
+            onChange={(e) => updateFielHandle("comment", e.target.value)}
           ></textarea>
         </div>
 
