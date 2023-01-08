@@ -1,9 +1,9 @@
 .steps {
   display: flex;
-  gap: 4rem;
+  gap: 5rem;
   justify-content: center;
   align-items: center;
-  max-width: 400px;
+  max-width: 480px;
   margin: 0 auto;
   position: relative;
   margin-bottom: 0.7rem;
@@ -11,7 +11,7 @@
 
 .steps::after {
   content: "";
-  width: 380px;
+  width: 400px;
   border-bottom: 2px solid #ccc;
   position: absolute;
   top: 20px;
@@ -21,7 +21,7 @@
   text-align: center;
   z-index: 1;
   background-color: #575757;
-  width: 125px;
+  width: 190px;
   padding: 0.6rem;
 }
 

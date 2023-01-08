@@ -16,7 +16,7 @@
 
 /* Forms */
 .form-container {
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto;
   background-color: #575757;
   padding: 1.5rem;
@@ -65,12 +65,11 @@ textarea {
 .actions {
   color: #000;
   display: flex;
-  gap: 2rem;
+  gap: 4rem;
   justify-content: center;
 }
 
 .actions button {
-  min-width: 110px;
   font-size: 1.1rem;
   padding: 0.3rem 0.7rem;
   display: flex;
